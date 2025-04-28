@@ -30,9 +30,12 @@ public class Ex07 {
 		for(int i=0; i<won.length; i++) {
 			
 			bill = price - won[i];
-			if(bill < won[i]) {
-				sum = sum + 1;
+			if(price > won[i]) {
+				if(bill < won[i]) {//price > won[i]
+					sum = sum + 1;
+				}				
 			}
+
 
 			
 		}System.out.println(won[0]+ ":" + sum + "개");
