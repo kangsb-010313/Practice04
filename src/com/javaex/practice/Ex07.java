@@ -24,21 +24,12 @@ public class Ex07 {
 		won[8] = 5;
 		won[9] = 1;
 		
-		int bill = 0;
-		int sum = 0;
-		
 		for(int i=0; i<won.length; i++) {
-			
-			bill = price - won[i];
-			if(price > won[i]) {
-				if(bill < won[i]) {//price > won[i]
-					sum = sum + 1;
-				}				
-			}
-
-
-			
-		}System.out.println(won[0]+ ":" + sum + "개");
+			int sum = won[i];
+			int a = price / sum;
+			price = price - (a * sum);
+			System.out.println(sum + "원:" + a + "개");
+		}
 		
 		
 		sc.close();
